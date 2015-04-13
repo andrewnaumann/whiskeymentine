@@ -38,3 +38,67 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.full-page {
+  position: relative;
+  height: 100%;
+}
+
+.logo {
+  position: fixed;
+  width: 100%;
+  top: 30%;
+  
+  img {
+    display: block;
+    margin:0 auto;
+    width: 60%;
+  }
+}
+
+footer {
+  padding: 0 25px;
+}
+
+.side-bar {
+  nav {
+    position: fixed;
+    top: 40%;
+    -webkit-transform-origin: left top;
+    -webkit-transform:rotate(-90deg);
+    ul {
+      margin: 0;
+    }
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}
+
+.block-grid-small {
+  margin: 0 auto;
+  padding: 0 25px;
+  
+  li {
+    overflow-x: hidden;
+    float: none;
+    display: inline-block;
+    // This property must be set to match the side spacing
+    padding-bottom: rem-calc(5);
+  }
+  img {
+    vertical-align: baseline;
+    width: 100%;
+    max-width: 100%;
+  }
+}
