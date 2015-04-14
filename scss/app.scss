@@ -40,8 +40,8 @@
 //   "foundation/components/visibility";
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+//  max-width: 1200px;
+//  margin: 0 auto;
 }
 
 .full-page {
@@ -52,7 +52,8 @@
 .logo {
   position: fixed;
   width: 100%;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-50%);
   
   img {
     display: block;
@@ -70,11 +71,16 @@ footer {
     position: fixed;
     top: 40%;
     -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
     -webkit-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform:rotate(-90deg);
     ul {
       margin: 0;
     }
     li {
+      padding-top: 3px;
       list-style: none;
       display: inline-block;
     }
