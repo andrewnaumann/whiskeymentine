@@ -39,9 +39,8 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-.container {
-//  max-width: 1200px;
-//  margin: 0 auto;
+.body-locked {
+    overflow: hidden;
 }
 
 .full-page {
@@ -108,3 +107,41 @@ footer {
     max-width: 100%;
   }
 }
+
+// Modal Stuff
+
+.modal-container {
+  display: none;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0; 
+  right: 0;
+  height: 100%; 
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.modal {
+  position: relative;
+  padding: 10px 200px 10px 10px;
+  width: 60%;
+  margin: 50px auto;
+  background: #FFF;
+}
+
+/*helper styles*/
+
+.dp-none {
+    display: none !important;
+}
+
+.dp-block {
+    display: block !important;
+}
+
