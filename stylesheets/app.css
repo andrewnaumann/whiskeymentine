@@ -1798,7 +1798,7 @@ select {
 [class*="block-grid-"] {
   display: block;
   padding: 0;
-  margin: 0 -0.3125rem;
+  margin: 0 -0.625rem;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
 [class*="block-grid-"]:before, [class*="block-grid-"]:after {
@@ -1814,7 +1814,7 @@ select {
   display: block;
   height: auto;
   float: left;
-  padding: 0 0.3125rem 0.625rem;
+  padding: 0 0.625rem 1.25rem;
 }
 
 @media only screen {
@@ -9157,12 +9157,6 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 42, ../scss/app.scss */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 /* line 47, ../scss/app.scss */
 .full-page {
   position: relative;
@@ -9173,55 +9167,61 @@ th.hide-for-touch {
 .logo {
   position: fixed;
   width: 100%;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-50%);
 }
-/* line 57, ../scss/app.scss */
+/* line 58, ../scss/app.scss */
 .logo img {
   display: block;
   margin: 0 auto;
   width: 60%;
 }
 
-/* line 64, ../scss/app.scss */
+/* line 65, ../scss/app.scss */
 footer {
   padding: 0 25px;
 }
 
-/* line 69, ../scss/app.scss */
+/* line 70, ../scss/app.scss */
 .side-bar nav {
   position: fixed;
   top: 40%;
   -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
   -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
-/* line 74, ../scss/app.scss */
+/* line 79, ../scss/app.scss */
 .side-bar nav ul {
   margin: 0;
 }
-/* line 77, ../scss/app.scss */
+/* line 82, ../scss/app.scss */
 .side-bar nav li {
+  padding-top: 3px;
   list-style: none;
   display: inline-block;
 }
-/* line 81, ../scss/app.scss */
+/* line 87, ../scss/app.scss */
 .side-bar nav a {
   text-decoration: none;
   color: #000;
 }
 
-/* line 88, ../scss/app.scss */
+/* line 94, ../scss/app.scss */
 .block-grid-small {
   margin: 0 auto;
   padding: 0 25px;
 }
-/* line 92, ../scss/app.scss */
+/* line 98, ../scss/app.scss */
 .block-grid-small li {
   overflow-x: hidden;
   float: none;
   display: inline-block;
   padding-bottom: 0.3125rem;
 }
-/* line 99, ../scss/app.scss */
+/* line 105, ../scss/app.scss */
 .block-grid-small img {
   vertical-align: baseline;
   width: 100%;
