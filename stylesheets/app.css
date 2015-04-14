@@ -9157,32 +9157,37 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
-/* line 47, ../scss/app.scss */
+/* line 42, ../scss/app.scss */
+.body-locked {
+  overflow: hidden;
+}
+
+/* line 46, ../scss/app.scss */
 .full-page {
   position: relative;
   height: 100%;
 }
 
-/* line 52, ../scss/app.scss */
+/* line 51, ../scss/app.scss */
 .logo {
   position: fixed;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 58, ../scss/app.scss */
+/* line 57, ../scss/app.scss */
 .logo img {
   display: block;
   margin: 0 auto;
   width: 60%;
 }
 
-/* line 65, ../scss/app.scss */
+/* line 64, ../scss/app.scss */
 footer {
   padding: 0 25px;
 }
 
-/* line 70, ../scss/app.scss */
+/* line 69, ../scss/app.scss */
 .side-bar nav {
   position: fixed;
   top: 40%;
@@ -9193,37 +9198,75 @@ footer {
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-/* line 79, ../scss/app.scss */
+/* line 78, ../scss/app.scss */
 .side-bar nav ul {
   margin: 0;
 }
-/* line 82, ../scss/app.scss */
+/* line 81, ../scss/app.scss */
 .side-bar nav li {
   padding-top: 3px;
   list-style: none;
   display: inline-block;
 }
-/* line 87, ../scss/app.scss */
+/* line 86, ../scss/app.scss */
 .side-bar nav a {
   text-decoration: none;
   color: #000;
 }
 
-/* line 94, ../scss/app.scss */
+/* line 93, ../scss/app.scss */
 .block-grid-small {
   margin: 0 auto;
   padding: 0 25px;
 }
-/* line 98, ../scss/app.scss */
+/* line 97, ../scss/app.scss */
 .block-grid-small li {
   overflow-x: hidden;
   float: none;
   display: inline-block;
   padding-bottom: 0.3125rem;
 }
-/* line 105, ../scss/app.scss */
+/* line 104, ../scss/app.scss */
 .block-grid-small img {
   vertical-align: baseline;
   width: 100%;
   max-width: 100%;
+}
+
+/* line 113, ../scss/app.scss */
+.modal-container {
+  display: none;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 123, ../scss/app.scss */
+.modal-container button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 130, ../scss/app.scss */
+.modal {
+  position: relative;
+  padding: 10px 200px 10px 10px;
+  width: 60%;
+  margin: 50px auto;
+  background: #FFF;
+}
+
+/*helper styles*/
+/* line 140, ../scss/app.scss */
+.dp-none {
+  display: none !important;
+}
+
+/* line 144, ../scss/app.scss */
+.dp-block {
+  display: block !important;
 }
