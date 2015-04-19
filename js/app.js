@@ -8,11 +8,15 @@ $(document).ready(function() {
     forceHeight: false
   });
   
+  
   $(".logo").click(function() {
     $('html, body').animate({
-      scrollTop: 550
-    }, 500);
+      scrollTop: 700
+    }, 700);
   });
+  
+  // Init Unveil
+  $('img').unveil(200);
   
   
 //  Modal stuff
@@ -21,28 +25,34 @@ $(document).ready(function() {
     open_modal = $('.open-modal'),
     close_modal = $('.close-modal'),
     modal_container = $('.modal-container'),
+      
     toggleModal = function() {
         body.toggleClass('body-locked');
         modal_container.toggleClass('dp-block');
     };
-  var pageHeight = body.height();
   
   function openModal(modal) {
+    var pageHeight = $(window).height();
     modal.css({top: pageHeight})
+    console.log("Open Modal Func pageHeight: " + pageHeight);
     modal.animate({
-      top: 100
+      top: 0
     }, 500);
   }
   
   open_modal.click(function(event){
     event.preventDefault();
     toggleModal();
-    openModal($('.modal'));
+    openModal($('.modal-container'));
   });
   
   close_modal.click(function(event){
     event.preventDefault();
-    $('.modal').animate({
+    var pageHeight = $(window).height();
+    console.log("Close Modal Func pageHeight: " + pageHeight);
+    console.log(".modal-container Scroll Position: " + $('.modal-container').scrollTop());
+    $('.modal-container').animate({
+      scrollTop: 0,
       top: pageHeight
     }, 500, function() {
       toggleModal();
