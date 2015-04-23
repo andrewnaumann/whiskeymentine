@@ -3,20 +3,53 @@
 $(document).foundation();
 
 $(document).ready(function() {
-  //Init skrollr
-  var s = skrollr.init({
-    forceHeight: false
-  });
-  
-  
-  $(".logo").click(function() {
-    $('html, body').animate({
-      scrollTop: 700
-    }, 700);
-  });
   
   // Init Unveil
   $('img').unveil(200);
+  
+  var controller = new ScrollMagic.Controller();
+  
+  // Animate Header
+  new ScrollMagic.Scene({
+    triggerElement: '.works-gallery',
+    triggerHook: 'onEnter',
+    duration: 500
+  })
+  .setTween('.logo', {top: '5%'})
+  .addTo(controller);
+  
+  
+  new ScrollMagic.Scene({
+    triggerElement: '.works-gallery',
+    triggerHook: 'onEnter',
+    duration: 500
+  })
+  .setTween('.logo img', {width: '30%'})  
+  .addTo(controller);
+  
+  new ScrollMagic.Scene({
+    triggerElement: '.works-gallery',
+    triggerHook: 'onLeave',
+    duration: 0
+  })
+  .addTo(controller)
+  .on('enter leave', function(event) {
+    $('.side-bar nav').toggleClass('hidden');
+  });
+  
+  
+
+
+  
+  $(".logo").click(function() {
+    var pageHeight = $(window).height();
+    $('html, body').animate({
+      scrollTop: pageHeight
+    }, 700);
+  });
+
+  
+
   
   
 //  Modal stuff
@@ -25,11 +58,15 @@ $(document).ready(function() {
     open_modal = $('.open-modal'),
     close_modal = $('.close-modal'),
     modal_container = $('.modal-container'),
-      
+    profile = $('#profile'),
+    contact = $('#contact'),
     toggleModal = function() {
         body.toggleClass('body-locked');
         modal_container.toggleClass('dp-block');
     };
+  
+  profile.hide();
+  contact.hide();
   
   function openModal(modal) {
     var pageHeight = $(window).height();
@@ -44,6 +81,12 @@ $(document).ready(function() {
     event.preventDefault();
     toggleModal();
     openModal($('.modal-container'));
+    if ($(this).text() === "profile") {
+      $('#profile').show();
+    }
+    if ($(this).text() === "contact") {
+      $('#contact').show();
+    }
   });
   
   close_modal.click(function(event){
@@ -56,6 +99,8 @@ $(document).ready(function() {
       top: pageHeight
     }, 500, function() {
       toggleModal();
+      profile.hide();
+      contact.hide();
     });
   });
   
