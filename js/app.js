@@ -1,3 +1,6 @@
+
+/* jslint browser: true *//* global $, ScrollMagic */
+
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
@@ -28,24 +31,30 @@ $(document).ready(function() {
   .addTo(controller);
   
   new ScrollMagic.Scene({
-    triggerElement: '.works-gallery',
+    offset: computeScrollDistance(),
     triggerHook: 'onLeave',
     duration: 0
   })
   .addTo(controller)
-  .on('enter leave', function(event) {
+  .on('enter leave', function() {
     $('.side-bar nav').toggleClass('hidden');
   });
   
   
-
+  function computeScrollDistance() {
+    var pageHeight = $(window).height();
+    var logoHeight = $('.logo img').height();
+    return pageHeight - logoHeight;
+  }
 
   
   $(".logo").click(function() {
-    var pageHeight = $(window).height();
-    $('html, body').animate({
-      scrollTop: pageHeight
-    }, 700);
+    if ($(document).scrollTop() === 0) {
+      var scrollDistance = computeScrollDistance();
+      $('html, body').animate({
+        scrollTop: scrollDistance
+      }, 700); 
+    }
   });
 
   
@@ -54,7 +63,6 @@ $(document).ready(function() {
   
 //  Modal stuff
   var body = $('body'),
-    main = $('.main'),
     open_modal = $('.open-modal'),
     close_modal = $('.close-modal'),
     modal_container = $('.modal-container'),
@@ -70,8 +78,7 @@ $(document).ready(function() {
   
   function openModal(modal) {
     var pageHeight = $(window).height();
-    modal.css({top: pageHeight})
-    console.log("Open Modal Func pageHeight: " + pageHeight);
+    modal.css({top: pageHeight});
     modal.animate({
       top: 0
     }, 500);
