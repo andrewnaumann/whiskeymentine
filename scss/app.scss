@@ -5,7 +5,7 @@
  @import
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
-   "foundation/components/block-grid",
+//   "foundation/components/block-grid",
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
 //   "foundation/components/buttons",
@@ -17,8 +17,8 @@
    "foundation/components/grid",
    "foundation/components/inline-lists",
 //   "foundation/components/joyride",
-   "foundation/components/keystrokes",
-   "foundation/components/labels",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
 //   "foundation/components/magellan",
 //   "foundation/components/orbit",
 //   "foundation/components/pagination",
@@ -32,7 +32,7 @@
 //   "foundation/components/switches",
 //   "foundation/components/tables",
 //   "foundation/components/tabs",
-   "foundation/components/thumbs",
+//   "foundation/components/thumbs",
 //   "foundation/components/tooltips",
 //   "foundation/components/top-bar",
    "foundation/components/type",
@@ -68,8 +68,7 @@ body {
 }
 
 footer {
-  margin: 0 25px;
-  padding: 0 10px;
+  margin-left: 35px;
 }
 
 .hidden {
@@ -101,21 +100,22 @@ footer {
   }
 }
 
-.block-grid-small {
-  margin: 0 auto;
-  padding: 0 25px;
+.works-gallery {
+  margin-left: 35px;
   
-  li {
-    overflow-x: hidden;
-    float: none;
-    display: inline-block;
-    // This property must be set to match the side spacing
-    padding-bottom: rem-calc(5);
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
+  
   img {
-    vertical-align: baseline;
-    width: 100%;
-    max-width: 100%;
+//    max-width: 75%;
+    vertical-align: bottom;
+  }
+  li {
+    display: inline-block;
+    margin: 0 20px 20px 0;
   }
 }
 
@@ -151,8 +151,8 @@ footer {
 .modal {
   position: relative;
   padding: 10px 200px 10px 10px;
-  width: 60%;
-  margin: 200px auto 500px auto;
+  width: 85%;
+  margin: 200px auto 250px auto;
   background: #FFF;
   
   h3 {
