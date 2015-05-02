@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whiskey&amp;Mentine</title>
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css">
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
@@ -18,14 +18,15 @@
       <div class="side-bar">
         <nav class="hidden">
           <ul>
-            <li><a href="#" class="open-modal">profile</a></li>
+            <li><a href="profile.html" id="profile">profile</a></li>
             <li>-</li>
-            <li><a href="#" class="open-modal">contact</a></li>
+            <li><a href="contact.html" id="contact">contact</a></li>
           </ul>
         </nav>
       </div>
+      
       <div class="works-gallery">
-        <ul class="block-grid-small">
+        <ul>
           <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/1.jpg"></li>
           <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/2.jpg"></li>
           <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/3.jpg"></li>
@@ -38,56 +39,20 @@
           <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/10.jpg"></li>
         </ul>
       </div>
-      <footer>
-        <p>Copyright by Whiskey&amp;Mentine, 2015.  All rights reserved.<br>Code by A. Naumann</p>
-      </footer>
+      
       <div class="modal-container dp-none">
         <div class="modal">
-          <button class="close-modal">x</button>
-          <div id="profile">
-            <p>We are a brand strategy and design firm that puts outstanding ideas into action to transform your vision into a living brand and drive business success.</p>
-            <h3>Building living brands</h3>
-            <p>We work at the intersection of brand strategy and design to introduce people to brands, and brands to people. We bring businesses to life by building the brand, design, and communication that become a part of peoples daily lives. We formulate design-focused strategic solutions to help businesses develop their vision. We work hard to provide perfect solutions based on the analysis of tangible data.</p>
-            <img src="http://placekitten.com/g/600/600">
-            <h3>Stay close</h3>
-            <p>We are a small studio and proud of it. Staying compact allows a closeness to our partners and projects which allows us to adapt quickly and efficiently. Each new project brings a unique set of characteristics, we craft a tailor made solution that perfectly fits the businesses needs. We partner directly with </p>
-          </div>
-          <div id="contact">
-            <p>Wherever you are in the world, whether you want to talk business, jobs, collaborations, or new ideas, 
-we would love to hear from you.</p>
-            <h3>Our services</h3>
-            <p>
-            Brand Creation, Art Direction, Identity Design, Branded Space, Packaging & POS, Signage & Wayfinding, Creative Development, Brand Strategy, and Consulting.<br>
-              <br>
-              hello@whiskeymentine.it<br>
-              PDF Case studies available on request.
-            </p>
-            <h3>Join the team</h3>
-            <p>
-              We are happy to receive your internship application. Please email your portfolio in PDF format 
-with a short covering note to info@whiskeymentine.it. Unfortunately we cannot reply to every 
-application we receive, but we certainly do our best. Please keep PDF attachments under 10MB. 
-We will be in touch if an opportunity arises.
-            </p>
-            <h3>Follow us</h3>
-            <ul>
-              <li>facebook</li>
-              <li>-</li>
-              <li>behance</li>
-              <li>-</li>
-              <li>instagram</li>
-              <li>-</li>
-              <li>tumblr</li>
-              <li>-</li>
-              <li>spotify</li>
-            </ul>
-            <h3>Online features</h3>
-            <p>
-            creativeboom.co.uk fubiz.net behance.com brandingserved.co designinspiration.net jvnk.co acharminghello.com type-lover.tumblr.com the-design-ark.com liquidinblacklight.tumblr.com rhysfergusoncreative.tumblr.com jayce-o.blogspot.com thewomb.nfnto.com underconsideration.com llgd.net serifsandsans.com
-            </p>
+          <button class="close-modal">+</button>
+          <div id="modal-content">
+          
           </div>
         </div>
       </div>
+      
+      <footer>
+        <p>Copyright by Whiskey&amp;Mentine, 2015.  All rights reserved.<br>Code by A. Naumann</p>
+      </footer>
+      
     </div>
     
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

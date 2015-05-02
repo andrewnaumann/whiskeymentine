@@ -1,29 +1,8 @@
-# Foundation Compass Template
+# Whiskey&Mentine
 
-The easiest way to get started with Foundation + Compass.
+Website redesign for [whiskeymentine.it](http://www.whiskeymentine.it)
 
-## Requirements
+## Hosting
 
-  * Ruby 1.9+
-  * [Node.js](http://nodejs.org)
-  * [compass](http://compass-style.org/): `gem install compass`
-  * [bower](http://bower.io): `npm install bower -g`
-
-## Quickstart
-
-  * [Download this starter compass project and unzip it](https://github.com/zurb/foundation-compass-template/archive/master.zip)
-  * Run `bower install` to install the latest version of Foundation
-  
-Then when you're working on your project, just run the following command:
-
-```bash
-bundle exec compass watch
-```
-
-## Upgrading
-
-If you'd like to upgrade to a newer version of Foundation down the road just run:
-
-```bash
-bower update
-```
+The github pages development version of the site
+can be found hosted at [andrewnaumann.github.io/whiskeymentine](http://andrewnaumann.github.io/whiskeymentine/)

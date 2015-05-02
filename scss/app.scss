@@ -5,7 +5,7 @@
  @import
 //   "foundation/components/accordion",
 //   "foundation/components/alert-boxes",
-   "foundation/components/block-grid",
+//   "foundation/components/block-grid",
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
 //   "foundation/components/buttons",
@@ -17,8 +17,8 @@
    "foundation/components/grid",
    "foundation/components/inline-lists",
 //   "foundation/components/joyride",
-   "foundation/components/keystrokes",
-   "foundation/components/labels",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
 //   "foundation/components/magellan",
 //   "foundation/components/orbit",
 //   "foundation/components/pagination",
@@ -32,7 +32,7 @@
 //   "foundation/components/switches",
 //   "foundation/components/tables",
 //   "foundation/components/tabs",
-   "foundation/components/thumbs",
+//   "foundation/components/thumbs",
 //   "foundation/components/tooltips",
 //   "foundation/components/top-bar",
    "foundation/components/type",
@@ -63,11 +63,12 @@ body {
     margin:0 auto;
     width: 60%;
     min-width: 250px;
+    cursor: pointer;
   }
 }
 
 footer {
-  padding: 0 25px;
+  margin-left: 35px;
 }
 
 .hidden {
@@ -99,21 +100,22 @@ footer {
   }
 }
 
-.block-grid-small {
-  margin: 0 auto;
-  padding: 0 25px;
+.works-gallery {
+  margin-left: 35px;
   
-  li {
-    overflow-x: hidden;
-    float: none;
-    display: inline-block;
-    // This property must be set to match the side spacing
-    padding-bottom: rem-calc(5);
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
+  
   img {
-    vertical-align: baseline;
-    width: 100%;
-    max-width: 100%;
+//    max-width: 75%;
+    vertical-align: bottom;
+  }
+  li {
+    display: inline-block;
+    margin: 0 20px 20px 0;
   }
 }
 
@@ -130,12 +132,13 @@ footer {
   
   button {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 20px;
+    right: 20px;
     border: 0;
     background: none;
     font-size: 2em;
-    padding: 0 10px;
+    padding: 0;
+    
     
     &:focus {
       outline: 0;
@@ -148,9 +151,9 @@ footer {
 
 .modal {
   position: relative;
-  padding: 10px 200px 10px 10px;
-  width: 60%;
-  margin: 200px auto 500px auto;
+  padding: 20px 20% 200px 20px;
+  width: 85%;
+  margin: 200px auto 250px auto;
   background: #FFF;
   
   h3 {
@@ -158,10 +161,34 @@ footer {
     display: inline-block;
     border-bottom: 2px solid;
   }
+  
+  img {
+    display: block;
+  }
+  
+  &.contact-modal {
+    color: #FFF;
+    background: #2A2A2A;
+    
+    h3 {
+      color: #FFF;
+    }
+    
+    .close-modal {
+      color: #FFF;
+    }
+  }
 }
 
+
+
 #contact {
-  
+  ul {
+    margin-left: 0;
+  }
+  li {
+    display: inline-block;
+  }
 }
 
 /*helper styles*/
