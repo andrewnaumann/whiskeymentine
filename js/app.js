@@ -63,18 +63,12 @@ $(document).ready(function() {
   
 //  Modal stuff
   var body = $('body'),
-    open_modal = $('.open-modal'),
     close_modal = $('.close-modal'),
     modal_container = $('.modal-container'),
-    profile = $('#profile'),
-    contact = $('#contact'),
     toggleModal = function() {
         body.toggleClass('body-locked');
         modal_container.toggleClass('dp-block');
     };
-  
-  profile.hide();
-  contact.hide();
   
   function openModal(modal) {
     var pageHeight = $(window).height();
@@ -84,30 +78,30 @@ $(document).ready(function() {
     }, 500);
   }
   
-  open_modal.click(function(event){
+  $('#profile').on('click', function(event) {
     event.preventDefault();
+    $('#modal-content').load('profile.html');
     toggleModal();
     openModal($('.modal-container'));
-    if ($(this).text() === "profile") {
-      $('#profile').show();
-    }
-    if ($(this).text() === "contact") {
-      $('#contact').show();
-    }
+  });
+  
+  $('#contact').on('click', function(event) {
+    event.preventDefault();
+    $('.modal').addClass("contact-modal");
+    $('#modal-content').load('contact.html');
+    toggleModal();
+    openModal($('.modal-container'));
   });
   
   close_modal.click(function(event){
     event.preventDefault();
     var pageHeight = $(window).height();
-    console.log("Close Modal Func pageHeight: " + pageHeight);
-    console.log(".modal-container Scroll Position: " + $('.modal-container').scrollTop());
     $('.modal-container').animate({
       scrollTop: 0,
       top: pageHeight
     }, 500, function() {
       toggleModal();
-      profile.hide();
-      contact.hide();
+      $('.modal').removeClass('contact-modal');
     });
   });
   
