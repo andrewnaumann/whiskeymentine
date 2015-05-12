@@ -40,7 +40,11 @@
    "foundation/components/visibility";
 
 body {
-  background: #FCFAFA;
+  background: #FFF;
+}
+
+a {
+  color: $jet;
 }
 
 .body-locked {
@@ -52,56 +56,52 @@ body {
   height: 100%;
 }
 
-.logo {
-  position: fixed;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  
-  img {
-    display: block;
-    margin:0 auto;
-    width: 60%;
-    min-width: 250px;
-    cursor: pointer;
-  }
+.container {
+  margin-left: 60px;
 }
-
-footer {
-  margin-left: 35px;
-}
-
 .hidden {
   opacity: 0;
 }
 
-.side-bar {
+.logo {
+  float:left;
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+header {
+  width: 100%;
+  max-width: 1024px;
+  padding: 20px 0;
+  position: fixed;
+  
   nav {
-    position: fixed;
-    top: 40%;
-    -webkit-transform-origin: left top;
-    -ms-transform-origin: left top;
-    transform-origin: left top;
-    -webkit-transform:rotate(-90deg);
-    -ms-transform:rotate(-90deg);
-    transform:rotate(-90deg);
+    float: right;
     ul {
       margin: 0;
     }
+    
     li {
-      padding-top: 3px;
+      float:left;
       list-style: none;
-      display: inline-block;
-    }
-    a {
-      text-decoration: none;
-      color: #000;
+      margin-right: 5px;
     }
   }
 }
 
+
+.tagline {
+  h2 {
+    float: left;
+    font-size: 1rem;  
+    margin-left: 150px;
+  }
+}
+
 .works-gallery {
-  margin-left: 35px;
+  clear:both;
+  padding-top: 100px;
   
   ul {
     list-style: none;
