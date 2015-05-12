@@ -152,7 +152,8 @@ header {
 .modal {
   position: relative;
   padding: 20px 20% 200px 20px;
-  width: 85%;
+  max-width: 1200px;
+  width: 100%;
   margin: 200px auto 250px auto;
   background: #FFF;
   
@@ -174,20 +175,18 @@ header {
       color: #FFF;
     }
     
+    ul {
+      margin-left: 0;
+    }
+    
+    li {
+      display: inline-block;
+      
+    }
+    
     .close-modal {
       color: #FFF;
     }
-  }
-}
-
-
-
-#contact {
-  ul {
-    margin-left: 0;
-  }
-  li {
-    display: inline-block;
   }
 }
 
