@@ -28,9 +28,9 @@ $(document).ready(function() {
     }, 500);
   }
   
-  $('#profile').on('click', function(event) {
+  $('#studio').on('click', function(event) {
     event.preventDefault();
-    $('#modal-content').load('profile.html');
+    $('#modal-content').load('studio.html');
     toggleModal();
     openModal($('.modal-container'));
   });
