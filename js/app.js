@@ -1,64 +1,10 @@
 
-/* jslint browser: true *//* global $, ScrollMagic */
-
-// Foundation JavaScript
-// Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
+/* jslint browser: true *//* global $ */
 
 $(document).ready(function() {
   
   // Init Unveil
   $('img').unveil(200);
-  
-  var controller = new ScrollMagic.Controller();
-  
-  // Animate Header
-  new ScrollMagic.Scene({
-    triggerElement: '.works-gallery',
-    triggerHook: 'onEnter',
-    duration: 500
-  })
-  .setTween('.logo', {top: '5%'})
-  .addTo(controller);
-  
-  
-  new ScrollMagic.Scene({
-    triggerElement: '.works-gallery',
-    triggerHook: 'onEnter',
-    duration: 500
-  })
-  .setTween('.logo img', {width: '30%'})  
-  .addTo(controller);
-  
-  new ScrollMagic.Scene({
-    offset: computeScrollDistance(),
-    triggerHook: 'onLeave',
-    duration: 0
-  })
-  .addTo(controller)
-  .on('enter leave', function() {
-    $('.side-bar nav').toggleClass('hidden');
-  });
-  
-  
-  function computeScrollDistance() {
-    var pageHeight = $(window).height();
-    var logoHeight = $('.logo img').height();
-    return pageHeight - logoHeight;
-  }
-
-  
-  $(".logo").click(function() {
-    if ($(document).scrollTop() === 0) {
-      var scrollDistance = computeScrollDistance();
-      $('html, body').animate({
-        scrollTop: scrollDistance
-      }, 700); 
-    }
-  });
-
-  
-
   
   
 //  Modal stuff
@@ -78,9 +24,9 @@ $(document).ready(function() {
     }, 500);
   }
   
-  $('#profile').on('click', function(event) {
+  $('#studio').on('click', function(event) {
     event.preventDefault();
-    $('#modal-content').load('profile.html');
+    $('#modal-content').load('studio.html');
     toggleModal();
     openModal($('.modal-container'));
   });
