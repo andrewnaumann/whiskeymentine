@@ -1,10 +1,6 @@
 
 /* jslint browser: true *//* global $ */
 
-// Foundation JavaScript
-// Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
-
 $(document).ready(function() {
   
   // Init Unveil

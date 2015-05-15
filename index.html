@@ -4,66 +4,82 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whiskey&amp;Mentine</title>
-    <link href="http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css">
+    <link rel="stylesheet" href="stylesheets/normalize.css" />
     <link rel="stylesheet" href="stylesheets/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="logo">
-          <h1>
-            W&amp;M
-          </h1>
+      <header class="page-header">
+        <div class="wrapper desktop-header">
+          <div class="logo">
+            <h1>
+              <img src="img/W&M_monogram.svg" alt="Whiskey&Mentine Monogram" />
+            </h1>
+          </div>
+          <div class="tagline">
+            <h2>
+              Building better buisness through better design.<br>
+              Welcome to Whiskey&amp;Mentine brand design
+            </h2>
+          </div>
+          <nav>
+            <ul>
+              <li><a id="studio" href="profile.html">studio</a></li>
+              <li>/</li>
+              <li><a id="contact" href="contact.html">contact</a></li>
+            </ul>
+            <a href="mailto:hello@whiskeymentine.it">hello@whiskeymentine.com</a>
+          </nav>
         </div>
-        <div class="tagline">
-          <h2>
-            Building better buisness through better design.<br>
-            Welcome to Whiskey&amp;Mentine brand design
-          </h2>
+        <div class="mobile-header">
+          <div class="logo">
+            <h1>
+              <img src="img/whiskeymentinelogo.svg" alt="Whiskey&Mentine Logo">
+            </h1>
+          </div>
+          <select>
+            <option value="all">all</option>
+            <option value="studio">studio</option>
+            <option value="contact">contact</option>
+          </select>
         </div>
-        <nav>
-          <ul>
-            <li><a id="studio" href="profile.html">studio</a></li>
-            <li>/</li>
-            <li><a id="contact" href="contact.html">contact</a></li>
-          </ul>
-          <a href="mailto:hello@whiskeymentine.it">hello@whiskeymentine.com</a>
-        </nav>
       </header>
       
       <div class="works-gallery">
-        <ul>
-          <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/1.jpg"></li>
-          <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/2.jpg"></li>
-          <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/3.jpg"></li>
-          <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/4.jpg"></li>
-          <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/5.jpg"></li>
-          <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/6.jpg"></li>
-          <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/7.jpg"></li>
-          <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/8.jpg"></li>
-          <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/9.jpg"></li>
-          <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/10.jpg"></li>
-        </ul>
+        <div class="wrapper">
+          <ul>
+            <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/1.jpg"></li>
+            <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/2.jpg"></li>
+            <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/3.jpg"></li>
+            <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/4.jpg"></li>
+            <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/5.jpg"></li>
+            <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/6.jpg"></li>
+            <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/7.jpg"></li>
+            <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/8.jpg"></li>
+            <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/9.jpg"></li>
+            <li><img src="bower_components/unveil/img/loader.gif" data-src="img/frontpage/10.jpg"></li>
+          </ul>
+        </div>
       </div>
       
       <div class="modal-container dp-none">
-        <div class="modal">
-          <button class="close-modal"><img src="img/close-button.svg"></button>
-          <div id="modal-content">
-          
+        <div class="wrapper">
+          <div class="modal">
+            <button class="close-modal"><img src="img/close-button.svg"></button>
+            <div id="modal-content">
+
+            </div>
           </div>
         </div>
       </div>
       
-      <footer>
-        <p>Copyright by Whiskey&amp;Mentine, 2015.  All rights reserved.<br>Code by A. Naumann</p>
+      <footer class="page-footer">
+        <div class="wrapper">
+          <p>Copyright by Whiskey&amp;Mentine, 2015.  All rights reserved.<br>Code by A. Naumann</p>
+        </div>
       </footer>
-      
-    </div>
     
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="bower_components/unveil/jquery.unveil.min.js"></script>
     <script src="js/app.js"></script>
   </body>
