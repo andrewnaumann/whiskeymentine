@@ -85,6 +85,10 @@ Utility Classes
   
   .modal {
     margin-left: $leftPagePadding;
+    
+    @include bp-medium {
+      margin: 0;
+    }
   }
   
 }
@@ -119,7 +123,7 @@ Page Header & Navigation
       margin: 0;
     }
     img {
-      height: .75rem;
+      height: 1rem;
     }
   }
   
@@ -249,6 +253,11 @@ footer {
   max-width: 1200px;
   min-height: 100%;
   
+  @include bp-medium {
+    margin: 0;
+    padding: 1rem;
+  }
+  
   h3 {
     display: inline-block;
     border-bottom: 1px solid;
@@ -284,10 +293,6 @@ footer {
       color: inherit;
     }
     
-    .services-section {
-      margin-bottom: 100px;
-    }
-    
     .close-modal {
       color: #FFF;
     }
@@ -296,6 +301,12 @@ footer {
 
 .modal-content {
   max-width: 1000px;
+}
+
+.work-detail {
+  li {
+    margin-bottom: 1rem;
+  }
 }
 
 /*helper styles*/

@@ -70,90 +70,96 @@ Utility Classes
 .wrapper .modal {
   margin-left: 3rem;
 }
+@media only screen and (max-width: 40em) {
+  /* line 86, ../scss/app.scss */
+  .wrapper .modal {
+    margin: 0;
+  }
+}
 
 /********************
 Page Header & Navigation
 ********************/
-/* line 96, ../scss/app.scss */
+/* line 100, ../scss/app.scss */
 .page-header {
   padding: 2rem 0;
   position: fixed;
   width: 100%;
 }
 @media only screen and (max-width: 40em) {
-  /* line 96, ../scss/app.scss */
+  /* line 100, ../scss/app.scss */
   .page-header {
     position: static;
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 105, ../scss/app.scss */
+  /* line 109, ../scss/app.scss */
   .page-header .desktop-header {
     display: none;
   }
 }
-/* line 111, ../scss/app.scss */
+/* line 115, ../scss/app.scss */
 .page-header .wrapper {
   max-width: 1200px;
 }
-/* line 115, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .page-header .logo {
   float: left;
 }
-/* line 118, ../scss/app.scss */
+/* line 122, ../scss/app.scss */
 .page-header .logo h1 {
   margin: 0;
 }
-/* line 121, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 .page-header .logo img {
-  height: .75rem;
+  height: 1rem;
 }
-/* line 126, ../scss/app.scss */
+/* line 130, ../scss/app.scss */
 .page-header .tagline {
   float: left;
   position: relative;
   left: 200px;
 }
-/* line 131, ../scss/app.scss */
+/* line 135, ../scss/app.scss */
 .page-header .tagline h2 {
   margin: 0;
 }
 @media only screen and (max-width: 60em) {
-  /* line 126, ../scss/app.scss */
+  /* line 130, ../scss/app.scss */
   .page-header .tagline {
     left: 50px;
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 126, ../scss/app.scss */
+  /* line 130, ../scss/app.scss */
   .page-header .tagline {
     left: 20px;
   }
 }
-/* line 144, ../scss/app.scss */
+/* line 148, ../scss/app.scss */
 .page-header nav {
   float: right;
   line-height: 1.3;
 }
-/* line 148, ../scss/app.scss */
+/* line 152, ../scss/app.scss */
 .page-header nav li {
   display: inline-block;
 }
-/* line 153, ../scss/app.scss */
+/* line 157, ../scss/app.scss */
 .page-header .mobile-header {
   padding: 0 10px;
 }
 @media only screen and (min-width: 40em) {
-  /* line 153, ../scss/app.scss */
+  /* line 157, ../scss/app.scss */
   .page-header .mobile-header {
     display: none;
   }
 }
-/* line 160, ../scss/app.scss */
+/* line 164, ../scss/app.scss */
 .page-header .mobile-header select {
   width: 100%;
 }
-/* line 164, ../scss/app.scss */
+/* line 168, ../scss/app.scss */
 .page-header .mobile-header .logo img {
   width: 100%;
   height: auto;
@@ -162,28 +168,28 @@ Page Header & Navigation
 /********************
 Image Gallery
 ********************/
-/* line 175, ../scss/app.scss */
+/* line 179, ../scss/app.scss */
 .works-gallery {
   clear: both;
   padding-top: 6.25rem;
 }
 @media only screen and (max-width: 40em) {
-  /* line 175, ../scss/app.scss */
+  /* line 179, ../scss/app.scss */
   .works-gallery {
     padding-top: 0;
   }
 }
-/* line 183, ../scss/app.scss */
+/* line 187, ../scss/app.scss */
 .works-gallery img {
   vertical-align: bottom;
 }
-/* line 187, ../scss/app.scss */
+/* line 191, ../scss/app.scss */
 .works-gallery li {
   display: inline-block;
   margin: 0 20px 20px 0;
 }
 @media only screen and (max-width: 40em) {
-  /* line 187, ../scss/app.scss */
+  /* line 191, ../scss/app.scss */
   .works-gallery li {
     margin: 5px 10px;
   }
@@ -193,18 +199,18 @@ Image Gallery
 Page Footer
 ********************/
 @media only screen and (max-width: 40em) {
-  /* line 201, ../scss/app.scss */
+  /* line 205, ../scss/app.scss */
   footer {
     padding-left: 10px;
   }
 }
 
-/* line 210, ../scss/app.scss */
+/* line 214, ../scss/app.scss */
 .body-locked {
   overflow: hidden;
 }
 
-/* line 214, ../scss/app.scss */
+/* line 218, ../scss/app.scss */
 .modal-container {
   display: none;
   overflow-y: scroll;
@@ -214,7 +220,7 @@ Page Footer
   height: 100%;
   width: 100%;
 }
-/* line 223, ../scss/app.scss */
+/* line 227, ../scss/app.scss */
 .modal-container button {
   position: absolute;
   top: 20px;
@@ -224,16 +230,16 @@ Page Footer
   font-size: 2em;
   padding: 0;
 }
-/* line 233, ../scss/app.scss */
+/* line 237, ../scss/app.scss */
 .modal-container button:focus {
   outline: 0;
 }
-/* line 236, ../scss/app.scss */
+/* line 240, ../scss/app.scss */
 .modal-container button:hover {
   cursor: pointer;
 }
 
-/* line 242, ../scss/app.scss */
+/* line 246, ../scss/app.scss */
 .modal {
   position: relative;
   padding: 3rem;
@@ -244,63 +250,71 @@ Page Footer
   max-width: 1200px;
   min-height: 100%;
 }
-/* line 252, ../scss/app.scss */
+@media only screen and (max-width: 40em) {
+  /* line 246, ../scss/app.scss */
+  .modal {
+    margin: 0;
+    padding: 1rem;
+  }
+}
+/* line 261, ../scss/app.scss */
 .modal h3 {
   display: inline-block;
   border-bottom: 1px solid;
   margin-bottom: 0;
 }
-/* line 258, ../scss/app.scss */
+/* line 267, ../scss/app.scss */
 .modal p {
   margin-top: 5px;
 }
-/* line 262, ../scss/app.scss */
+/* line 271, ../scss/app.scss */
 .modal img {
   display: block;
 }
-/* line 266, ../scss/app.scss */
+/* line 275, ../scss/app.scss */
 .modal.contact-modal {
   color: #FFF;
   background: #2A2A2A;
 }
-/* line 270, ../scss/app.scss */
+/* line 279, ../scss/app.scss */
 .modal.contact-modal h3 {
   color: #FFF;
 }
-/* line 274, ../scss/app.scss */
+/* line 283, ../scss/app.scss */
 .modal.contact-modal ul {
   margin-left: 0;
   margin: 10px 0 1rem;
 }
-/* line 279, ../scss/app.scss */
+/* line 288, ../scss/app.scss */
 .modal.contact-modal li {
   display: inline-block;
 }
-/* line 283, ../scss/app.scss */
+/* line 292, ../scss/app.scss */
 .modal.contact-modal a {
   color: inherit;
 }
-/* line 287, ../scss/app.scss */
-.modal.contact-modal .services-section {
-  margin-bottom: 100px;
-}
-/* line 291, ../scss/app.scss */
+/* line 296, ../scss/app.scss */
 .modal.contact-modal .close-modal {
   color: #FFF;
 }
 
-/* line 297, ../scss/app.scss */
+/* line 302, ../scss/app.scss */
 .modal-content {
   max-width: 1000px;
 }
 
+/* line 307, ../scss/app.scss */
+.work-detail li {
+  margin-bottom: 1rem;
+}
+
 /*helper styles*/
-/* line 303, ../scss/app.scss */
+/* line 314, ../scss/app.scss */
 .dp-none {
   display: none;
 }
 
-/* line 307, ../scss/app.scss */
+/* line 318, ../scss/app.scss */
 .dp-block {
   display: block;
 }
