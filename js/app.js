@@ -3,10 +3,6 @@
 
 $(document).ready(function() {
   
-  // Init Unveil
-  $('img').unveil(200);
-  
-  
 //  Modal stuff
   var body = $('body'),
     close_modal = $('.close-modal'),
@@ -35,6 +31,13 @@ $(document).ready(function() {
     event.preventDefault();
     $('.modal').addClass("contact-modal");
     $('#modal-content').load('contact.html');
+    toggleModal();
+    openModal($('.modal-container'));
+  });
+  
+    $('.works-gallery a').on('click', function(event){
+    event.preventDefault();
+    $('#modal-content').load($(this).attr('href'));
     toggleModal();
     openModal($('.modal-container'));
   });
