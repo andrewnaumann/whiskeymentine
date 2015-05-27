@@ -158,7 +158,7 @@ Page Header & Navigation
   .mobile-header {
     padding: 0 10px;
     
-    @include mq(641, false, min) {
+    @include mq(641) {
       display: none;
     }
     
@@ -214,6 +214,7 @@ footer {
 
 .body-locked {
   overflow: hidden;
+  position: fixed;
 }
 
 .modal-container {
