@@ -17,7 +17,9 @@ $(document).ready(function() {
     modal.css({top: pageHeight});
     modal.animate({
       top: 0
-    }, 500);
+    }, 500, function(){
+      $(".mobile-header select option[value=all]").attr('selected', true);
+    });
   }
   
   $('#studio').on('click', function(event) {
@@ -35,12 +37,22 @@ $(document).ready(function() {
     openModal($('.modal-container'));
   });
   
-    $('.works-gallery a').on('click', function(event){
+  $('.works-gallery a').on('click', function(event){
     event.preventDefault();
     $('#modal-content').load($(this).attr('href'));
     toggleModal();
     openModal($('.modal-container'));
   });
+  
+  $(".mobile-header select").on("change", function() {
+    var pageToLoad = $(this).val() + '.html';
+    if (pageToLoad === "contact.html") {
+      $('.modal').addClass("contact-modal");
+    }
+    $('#modal-content').load(pageToLoad);
+    toggleModal();
+    openModal($('.modal-container'));
+  }); 
   
   close_modal.click(function(event){
     event.preventDefault();
