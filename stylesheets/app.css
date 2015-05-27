@@ -198,9 +198,10 @@ Page Footer
 /* line 206, ../scss/app.scss */
 .body-locked {
   overflow: hidden;
+  position: absolute;
 }
 
-/* line 210, ../scss/app.scss */
+/* line 211, ../scss/app.scss */
 .modal-container {
   display: none;
   overflow-y: scroll;
@@ -210,7 +211,7 @@ Page Footer
   height: 100%;
   width: 100%;
 }
-/* line 219, ../scss/app.scss */
+/* line 220, ../scss/app.scss */
 .modal-container button {
   position: absolute;
   top: 20px;
@@ -220,16 +221,16 @@ Page Footer
   font-size: 2em;
   padding: 0;
 }
-/* line 229, ../scss/app.scss */
+/* line 230, ../scss/app.scss */
 .modal-container button:focus {
   outline: 0;
 }
-/* line 232, ../scss/app.scss */
+/* line 233, ../scss/app.scss */
 .modal-container button:hover {
   cursor: pointer;
 }
 
-/* line 238, ../scss/app.scss */
+/* line 239, ../scss/app.scss */
 .modal {
   position: relative;
   padding: 3rem;
@@ -242,81 +243,81 @@ Page Footer
   min-height: 100%;
 }
 @media only screen and (max-width: 40em) {
-  /* line 238, ../scss/app.scss */
+  /* line 239, ../scss/app.scss */
   .modal {
     margin: 0;
     padding: 1rem;
   }
 }
-/* line 254, ../scss/app.scss */
+/* line 255, ../scss/app.scss */
 .modal h3 {
   display: inline-block;
   border-bottom: 1px solid;
   margin-bottom: 0;
 }
-/* line 260, ../scss/app.scss */
+/* line 261, ../scss/app.scss */
 .modal p {
   margin-top: 5px;
 }
-/* line 264, ../scss/app.scss */
+/* line 265, ../scss/app.scss */
 .modal img {
   display: block;
 }
-/* line 268, ../scss/app.scss */
+/* line 269, ../scss/app.scss */
 .modal.contact-modal {
   color: #FFF;
   background: #2A2A2A;
 }
-/* line 272, ../scss/app.scss */
+/* line 273, ../scss/app.scss */
 .modal.contact-modal h3 {
   color: #FFF;
 }
-/* line 276, ../scss/app.scss */
+/* line 277, ../scss/app.scss */
 .modal.contact-modal ul {
   margin-left: 0;
   margin: 10px 0 1rem;
 }
-/* line 281, ../scss/app.scss */
+/* line 282, ../scss/app.scss */
 .modal.contact-modal li {
   display: inline-block;
 }
-/* line 285, ../scss/app.scss */
+/* line 286, ../scss/app.scss */
 .modal.contact-modal a {
   color: inherit;
 }
-/* line 289, ../scss/app.scss */
+/* line 290, ../scss/app.scss */
 .modal.contact-modal .close-modal {
   color: #FFF;
 }
 
-/* line 296, ../scss/app.scss */
+/* line 297, ../scss/app.scss */
 .wrapper .modal {
   margin-left: 3rem;
 }
 @media only screen and (max-width: 40em) {
-  /* line 296, ../scss/app.scss */
+  /* line 297, ../scss/app.scss */
   .wrapper .modal {
     margin: 0;
   }
 }
 
-/* line 305, ../scss/app.scss */
+/* line 306, ../scss/app.scss */
 .modal-content {
   max-width: 1000px;
 }
 
-/* line 310, ../scss/app.scss */
+/* line 311, ../scss/app.scss */
 .work-detail li {
   margin-bottom: 1rem;
 }
 
 /*helper styles*/
-/* line 317, ../scss/app.scss */
+/* line 318, ../scss/app.scss */
 .dp-none {
   display: none;
 }
 
-/* line 321, ../scss/app.scss */
+/* line 322, ../scss/app.scss */
 .dp-block {
   display: block;
 }
