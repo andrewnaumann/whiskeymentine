@@ -214,12 +214,12 @@ footer {
 
 .body-locked {
   overflow: hidden;
-  position: fixed;
 }
 
 .modal-container {
   display: none;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   position: fixed;
   top: 0; 
   left: 0;
@@ -245,13 +245,18 @@ footer {
   }
 }
 
+.dismiss-target {
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+}
+
 .modal {
   position: relative;
   padding: 3rem;
   background: #FFF;
   margin-top: 8rem;
   padding-bottom: 10%;
-  margin-bottom: 10%;
   margin-right: 12rem;
   max-width: 1200px;
   min-height: 100%;

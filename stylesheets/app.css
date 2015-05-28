@@ -185,13 +185,13 @@ Page Footer
 /* line 215, ../scss/app.scss */
 .body-locked {
   overflow: hidden;
-  position: fixed;
 }
 
-/* line 220, ../scss/app.scss */
+/* line 219, ../scss/app.scss */
 .modal-container {
   display: none;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   position: fixed;
   top: 0;
   left: 0;
@@ -218,93 +218,99 @@ Page Footer
 }
 
 /* line 248, ../scss/app.scss */
+.dismiss-target {
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* line 254, ../scss/app.scss */
 .modal {
   position: relative;
   padding: 3rem;
   background: #FFF;
   margin-top: 8rem;
   padding-bottom: 10%;
-  margin-bottom: 10%;
   margin-right: 12rem;
   max-width: 1200px;
   min-height: 100%;
 }
 @media only screen and (max-width: 40em) {
-  /* line 248, ../scss/app.scss */
+  /* line 254, ../scss/app.scss */
   .modal {
     margin: 0;
     padding: 1rem;
   }
 }
-/* line 264, ../scss/app.scss */
+/* line 269, ../scss/app.scss */
 .modal h3 {
   display: inline-block;
   border-bottom: 1px solid;
   margin-bottom: 0;
 }
-/* line 270, ../scss/app.scss */
+/* line 275, ../scss/app.scss */
 .modal p {
   margin-top: 5px;
 }
-/* line 274, ../scss/app.scss */
+/* line 279, ../scss/app.scss */
 .modal img {
   display: block;
 }
-/* line 278, ../scss/app.scss */
+/* line 283, ../scss/app.scss */
 .modal.contact-modal {
   color: #FFF;
   background: #2A2A2A;
 }
-/* line 282, ../scss/app.scss */
+/* line 287, ../scss/app.scss */
 .modal.contact-modal h3 {
   color: #FFF;
 }
-/* line 286, ../scss/app.scss */
+/* line 291, ../scss/app.scss */
 .modal.contact-modal ul {
   margin-left: 0;
   margin: 10px 0 1rem;
 }
-/* line 291, ../scss/app.scss */
+/* line 296, ../scss/app.scss */
 .modal.contact-modal li {
   display: inline-block;
 }
-/* line 295, ../scss/app.scss */
+/* line 300, ../scss/app.scss */
 .modal.contact-modal a {
   color: inherit;
 }
-/* line 299, ../scss/app.scss */
+/* line 304, ../scss/app.scss */
 .modal.contact-modal .close-modal {
   color: #FFF;
 }
 
-/* line 306, ../scss/app.scss */
+/* line 311, ../scss/app.scss */
 .wrapper .modal {
   margin-left: 3rem;
 }
 @media only screen and (max-width: 40em) {
-  /* line 306, ../scss/app.scss */
+  /* line 311, ../scss/app.scss */
   .wrapper .modal {
     margin: 0;
   }
 }
 
-/* line 315, ../scss/app.scss */
+/* line 320, ../scss/app.scss */
 .modal-content {
   max-width: 1000px;
 }
 
-/* line 320, ../scss/app.scss */
+/* line 325, ../scss/app.scss */
 .work-detail li {
   margin-bottom: 1rem;
 }
 
 /*helper styles*/
-/* line 327, ../scss/app.scss */
+/* line 332, ../scss/app.scss */
 .dp-none {
   display: none;
 }
 
-/* line 331, ../scss/app.scss */
+/* line 336, ../scss/app.scss */
 .dp-block {
   display: block;
 }
