@@ -1,6 +1,8 @@
 /* jslint browser: true *//* global $ */
 
 $(document).ready(function() {
+  'use strict';
+  
   
   var $body = $('body'),
       $modalContent = $('#modal-content'),
@@ -14,16 +16,18 @@ $(document).ready(function() {
     pageHeight = $(window).height();
     // Set modal container's top to be just offscreen
     modal.css({top:pageHeight});
-    $modal.css({marginBottom:pageHeight});
+    if ($(window).width() > 640) {
+      $modal.css({marginBottom:pageHeight});
+    }
     // Display modal
     modal.toggleClass('dp-block');
+    // Set initial click target to dismiss
+    $modalBackground.css({height:pageHeight});
     // Animate modal up to top of window
     modal.animate({
       top: 0
-    }, 500, function(){
-      // once animation has finished, calculate the total height and place a
-      // click target below to dismiss modal when clicked outside
-      $modalBackground.css({height:$modalContainer.prop('scrollHeight')});
+    }, 500, function() {
+      $(".mobile-header select option[value=all]").attr('selected', true);
     });
     // lock body from being able to scroll
     $body.toggleClass('body-locked');
@@ -51,6 +55,14 @@ $(document).ready(function() {
     }
   }
   
+  function destroyModal(modal) {
+    modal.attr('active', 'false');
+    modal.scrollTop(0);
+
+    modal.toggleClass('dp-block');
+    $body.toggleClass('body-locked');
+  }
+  
   $('a.display-modal').on('click', function(event) {
     event.preventDefault();
     
@@ -62,12 +74,39 @@ $(document).ready(function() {
     toggleModal($modalContainer);
   }); // End $('a.display-modal').on('click')
   
-  $($modalBackground).on('click', function() {
+  $(".mobile-header select").on("change", function() {
+    var pageToLoad = $(this).val() + '.html';
+    if (pageToLoad === "contact.html") {
+      $('.modal').addClass("contact-modal");
+    }
+    $('#modal-content').load(pageToLoad);
     toggleModal($modalContainer);
+  });
+  
+  $($modalBackground).on('click', function(event) {
+    var posY = $(this).offset().top;
+    if(event.pageY - posY < 140) {
+      toggleModal($modalContainer);
+    } else {
+      $modalContainer.animate({
+      scrollTop: $modalContainer.prop("scrollHeight")
+    }, 500); 
+    }
   });
   
   $('.close-modal').on('click', function() {
     toggleModal($modalContainer);
+  });
+  
+  
+  // THIS WORKS BUT NEEDS TO BE OPTIMIZED!!!!
+  $modalContainer.on("scroll", function() {
+    if ($(window).width() > 640) {
+      $modalBackground.css({height:$modalContainer.prop('scrollHeight')});
+      if ($modalContainer.scrollTop() + pageHeight === $modalContainer.prop("scrollHeight")) {
+      destroyModal($modalContainer);
+    }
+    }
   });
   
 }); // End $(document).ready()
