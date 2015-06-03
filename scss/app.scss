@@ -138,8 +138,19 @@ Page Header & Navigation
   }
   
   .tagline {
-    float: left;
-    position: relative;
+    float: right;
+    margin-right: 1rem;
+    
+    @include mq(800) {
+      position: relative;
+      left: 100px;
+      float: left;
+      margin: 0;
+    }
+    
+    @include mq(1000) {
+      left: 200px;
+    }
     
     h2 {
       margin: 0;
@@ -147,7 +158,13 @@ Page Header & Navigation
   }
   
   nav {
-    float: right;
+    clear:both;
+    
+    @include mq(800) {
+      clear: none;
+      float: right;
+    }
+    
     line-height: 1.3;
     
     li {
@@ -178,11 +195,11 @@ Image Gallery
 ********************/
 
 .works-gallery {
-  clear:both;
-  padding-top: 6.25rem;
+  padding-top: 0;
   
-  @include bp-medium {
-    padding-top: 0;
+  @include mq(641) {
+    clear: both;
+    padding-top: 7.5rem;
   }
   
   img {
@@ -204,9 +221,10 @@ Page Footer
 ********************/
 
 footer {
+  padding-left: 10px;
   
-  @include bp-medium {
-    padding-left: 10px;
+  @include mq(641) {
+    padding-left: 0;
   }
 }
 
@@ -225,45 +243,58 @@ footer {
   left: 0;
   height: 100%; 
   width: 100%;
-  
-  button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    border: 0;
-    background: none;
-    font-size: 2em;
-    padding: 0;
-    
-    
-    &:focus {
-      outline: 0;
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
 }
 
 .dismiss-target {
-  position: absolute;
-  width: 100%;
-  cursor: pointer;
+  
+  display: none;
+  
+  @include mq(641){
+    display: block;
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+  }
 }
+
+.mobile-close-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 3px 0;
+    background: inherit;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+    img {
+      width: 30px;
+      cursor: pointer;
+    }
+  
+    @include mq(641) {
+      display: none;
+    }
+  }
 
 .modal {
   position: relative;
-  padding: 3rem;
   background: #FFF;
-  margin-top: 8rem;
-  padding-bottom: 10%;
-  margin-right: 12rem;
+  margin: 0;
+  padding: 1rem;
   max-width: 1200px;
   min-height: 100%;
   
-  @include bp-medium {
-    margin: 0;
-    padding: 1rem;
+  @include mq(641){
+    padding: 3rem;
+    margin-top: 8rem;
+    padding-bottom: 10%;
+    margin-right: 4rem;
+  }
+  
+  @include mq(800) {
+    margin-right: 12rem;
   }
   
   h3 {
@@ -309,7 +340,12 @@ footer {
 
 .wrapper {
   .modal {
-    margin-left: $leftPagePadding;
+    padding-top: 50px;
+    margin-left: $leftPagePadding / 2;
+    
+    @include mq(800) {
+      margin-left: $leftPagePadding;
+    }
     
     @include bp-medium {
       margin: 0;
